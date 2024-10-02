@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+
+# Node.js modules (if you use npm for any frontend dependencies)
+node_modules/
+
+# Logs
+*.log
+
+# Editor settings (VSCode, Sublime, etc.)
+.vscode/
+*.sublime-workspace
