@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('.../assets/images/dandelion.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #07150a;
+}
+
+header {
+    background-color: #07150a;
+    color: #f9fdfa;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    margin: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d077c5;
+    /* Pinkish purple for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ba9ede;
+    /* Light purple on hover */
+}
+
+/* Buttons or Special Links */
+button,
+.btn {
+    background-color: #51c366;
+    /* Bright green for buttons */
+    border: none;
+    color: #f9fdfa;
+    /* Off-white text */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #ba9ede;
+    /* Light purple on hover */
+}
+
+footer {
+    background-color: #07150a;
+    color: #f9fdfa;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
