@@ -1,5 +1,6 @@
 :root {
     --black: #000000;
+    --black-transparent: rgba(0, 0, 0, 0.8);
     --off-white: #f9fdfa;
     --bright-green: #51c366;
     --light-purple: #ba9ede;
@@ -27,11 +28,15 @@ body::before {
     z-index: -1;
 }
 
+
+
 header {
-    background-color: var(--black);
+    background-color: var(--black-transparent);
     color: var(--off-white);
     text-align: center;
     padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -42,13 +47,23 @@ header p {
     font-size: 1.2rem;
 }
 
+
+
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(5, minmax(160px, 1fr));
     gap: 20px;
     padding: 40px;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.btn-description {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: var(--off-white);
+    opacity: 0.7;
 }
 
 .button-grid .btn {
@@ -62,19 +77,72 @@ header p {
     font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .button-grid .btn:hover {
     background-color: var(--pinkish-purple);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+
+
+.search-bar-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.search-bar-wrapper input {
+    width: 100%;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    border: 2px solid var(--bright-green);
+    border-radius: 25px;
+    background-color: var(--off-white);
+    color: var(--black);
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar-wrapper input:focus {
+    border-color: var(--pinkish-purple); 
+}
+
+.search-bar-wrapper:hover input {
+    border-color: var(--pinkish-purple);
+}
+
+.search-bar-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--bright-green);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.search-bar-wrapper:hover i {
+    color: var(--pinkish-purple);
+}
+
+.search-bar-wrapper:focus i {
+    color: var(--pinkish-purple);
+}
+
+
+
 footer {
-    background-color: var(--black);
+    background-color: var(--black-transparent);
     color: var(--off-white);
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.5);
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TI Anna Nowak</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -13,27 +14,73 @@
         <h1>Techniki internetowe</h1>
         <p>Anna Nowak</p>
     </header>
+
+    <div class="search-bar-wrapper">
+        <i class="fas fa-search" id="searchIcon"></i>
+        <input type="text" id="taskSearch" placeholder="Wyszukaj zadanie..." onkeyup="handleSearchInput()" onfocus="setIconToPurple()" onblur="resetIconColor()">   
+    </div>
+
     
-    <section class="button-grid">
-        <a href="tasks/task1.html" class="btn">Task 1</a>
-        <a href="tasks/task2.html" class="btn">Task 2</a>
-        <a href="tasks/task3.html" class="btn">Task 3</a>
-        <a href="tasks/task4.html" class="btn">Task 4</a>
-        <a href="tasks/task5.html" class="btn">Task 5</a>
-        <a href="tasks/task6.html" class="btn">Task 6</a>
-        <a href="tasks/task7.html" class="btn">Task 7</a>
-        <a href="tasks/task8.html" class="btn">Task 8</a>
-        <a href="tasks/task9.html" class="btn">Task 9</a>
-        <a href="tasks/task10.html" class="btn">Task 10</a>
-        <a href="tasks/task11.html" class="btn">Task 11</a>
-        <a href="tasks/task12.html" class="btn">Task 12</a>
-        <a href="tasks/task13.html" class="btn">Task 13</a>
-        <a href="tasks/task14.html" class="btn">Task 14</a>
+    <section class="button-grid" id="taskGrid">
+        <a href="laby/lab2/lab2.html" class="btn">
+            <span class="btn-title">2</span>
+            <span class="btn-description">Język XML i arkusze styli CSS</span>
+        </a>
+        <a href="laby/lab3/lab3.html" class="btn">
+            <span class="btn-title">3</span>
+            <span class="btn-description">Przestrzenie nazw, język XPath i grafika SVG</span>
+        </a>
+        <a href="laby/lab4/lab4.html" class="btn">
+            <span class="btn-title">4</span>
+            <span class="btn-description">Transformacja XSLT</span>
+        </a>
+        <a href="laby/lab5/lab5.html" class="btn">
+            <span class="btn-title">5</span>
+            <span class="btn-description">Technologia CGI, baza klucz - wartość</span>
+        </a>
+        <a href="laby/lab6/lab6.html" class="btn">
+            <span class="btn-title">6</span>
+            <span class="btn-description">Język JavaScript (ECMAScript) - klient</span>
+        </a>
+        <a href="laby/lab7/lab7.html" class="btn">
+            <span class="btn-title">7</span>
+            <span class="btn-description">Język JavaScript, AJAX</span>
+        </a>
+        <a href="laby/lab8/lab8.html" class="btn">
+            <span class="btn-title">8</span>
+            <span class="btn-description">Język PHP, wprowadzenie</span>
+        </a>
+        <a href="laby/lab9/lab9.html" class="btn">
+            <span class="btn-title">9</span>
+            <span class="btn-description">Wzorzec MVC - relacyjna baza danych</span>
+        </a>
+        <a href="laby/lab10/lab10.html" class="btn">
+            <span class="btn-title">10</span>
+            <span class="btn-description">Baza dokumentowa MongoDB</span>
+        </a>
+        <a href="laby/lab11/lab11.html" class="btn">
+            <span class="btn-title">11</span>
+            <span class="btn-description">Język JavaScript - serwer node.js</span>
+        </a>
+        <a href="laby/lab12/lab12.html" class="btn">
+            <span class="btn-title">12</span>
+            <span class="btn-description">Styl RESTful (php, node.js)</span>
+        </a>
+        <a href="laby/lab13/lab13.html" class="btn">
+            <span class="btn-title">13</span>
+            <span class="btn-description">Styl RESTful - token JWT</span>
+        </a>
+        <a href="laby/lab14/lab14.html" class="btn">
+            <span class="btn-title">14</span>
+            <span class="btn-description">RESTful - realizacja projektu</span>
+        </a>
     </section>
 
     <footer>
         <p>© 2024 Anna Nowak</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
