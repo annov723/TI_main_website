@@ -1,15 +1,35 @@
+:root {
+    --black: #000000;
+    --off-white: #f9fdfa;
+    --bright-green: #51c366;
+    --light-purple: #ba9ede;
+    --pinkish-purple: #d077c5;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('.../assets/images/dandelion.jpg') no-repeat center center fixed;
+    position: relative;
+    color: var(--black);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/dandelion.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #07150a;
+    filter: blur(1px);
+    z-index: -1;
 }
 
 header {
-    background-color: #07150a;
-    color: #f9fdfa;
+    background-color: var(--black);
+    color: var(--off-white);
     text-align: center;
     padding: 20px;
 }
@@ -22,55 +42,36 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Navigation */
-nav {
-    margin: 20px;
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 10px;
-}
-
-nav ul li a {
+.button-grid .btn {
+    display: inline-block;
+    background-color: var(--light-purple);
+    color: var(--off-white);
+    text-align: center;
+    padding: 15px;
     text-decoration: none;
-    color: #d077c5;
-    /* Pinkish purple for links */
+    font-size: 1rem;
     font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ba9ede;
-    /* Light purple on hover */
-}
-
-/* Buttons or Special Links */
-button,
-.btn {
-    background-color: #51c366;
-    /* Bright green for buttons */
-    border: none;
-    color: #f9fdfa;
-    /* Off-white text */
-    padding: 10px 20px;
-    cursor: pointer;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover,
-.btn:hover {
-    background-color: #ba9ede;
-    /* Light purple on hover */
+.button-grid .btn:hover {
+    background-color: var(--pinkish-purple);
 }
 
 footer {
-    background-color: #07150a;
-    color: #f9fdfa;
+    background-color: var(--black);
+    color: var(--off-white);
     text-align: center;
     padding: 10px;
     position: fixed;
