@@ -1,8 +1,3 @@
-function handleSearchInput() {
-    // checkInput()
-    filterTasks()
-}
-
 function filterTasks() {
     const input = document.getElementById('taskSearch');
     const filter = input.value.toLowerCase();

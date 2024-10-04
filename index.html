@@ -15,9 +15,9 @@
         <p>Anna Nowak</p>
     </header>
 
-    <div class="search-bar-wrapper">
+    <div class="search-bar-wrapper" onfocus="setIconToPurple()">
         <i class="fas fa-search" id="searchIcon"></i>
-        <input type="text" id="taskSearch" placeholder="Wyszukaj zadanie..." onkeyup="handleSearchInput()" onfocus="setIconToPurple()" onblur="resetIconColor()">   
+        <input type="text" id="taskSearch" placeholder="Wyszukaj zadanie..." onkeyup="filterTasks()" onfocus="setIconToPurple()" onblur="resetIconColor()">   
     </div>
 
     
