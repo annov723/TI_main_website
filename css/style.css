@@ -13,6 +13,10 @@ body {
     padding: 0;
     position: relative;
     color: var(--black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
 }
 
 body::before {
@@ -36,7 +40,9 @@ header {
     text-align: center;
     padding: 20px;
     z-index: 1000;
+    position: fixed;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 header h1 {
@@ -47,11 +53,11 @@ header p {
     font-size: 1.2rem;
 }
 
-
-
 .button-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(160px, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 40px;
     margin: 0 auto;
@@ -93,6 +99,7 @@ header p {
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
+    margin-top: 200px
 }
 
 .search-bar-wrapper input {
@@ -133,6 +140,7 @@ header p {
 .search-bar-wrapper:focus i {
     color: var(--pinkish-purple);
 }
+
 
 
 
