@@ -15,12 +15,20 @@ function filterTasks() {
     }
 }
 
-function setIconToPurple() {
-    const searchIcon = document.getElementById('searchIcon');
-    searchIcon.style.color = 'rgb(208, 119, 197)';
+function handleMouseEnter() {
+    isMouseOverSearchBar = true;
+    const searchIcon = document.querySelector('.fas.fa-search');
+    searchIcon.style.color = '#d077c5';
 }
 
-function resetIconColor() {
-    const searchIcon = document.getElementById('searchIcon');
-    searchIcon.style.color = 'rgb(81, 195, 102)';
+function handleMouseLeave() {
+    isMouseOverSearchBar = false;
+    const searchIcon = document.querySelector('.fas.fa-search');
+    if (!searchBar.matches(':focus')) {
+        searchIcon.style.color = '#51c366';
+    }
 }
+
+const searchBar = document.getElementById('taskSearch');
+searchBar.addEventListener('mouseenter', handleMouseEnter);
+searchBar.addEventListener('mouseleave', handleMouseLeave);

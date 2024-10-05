@@ -133,14 +133,6 @@ header p {
     transition: color 0.3s ease;
 }
 
-.search-bar-wrapper:hover i {
-    color: var(--pinkish-purple);
-}
-
-.search-bar-wrapper:focus i {
-    color: var(--pinkish-purple);
-}
-
 
 
 footer {
