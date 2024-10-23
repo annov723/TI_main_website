@@ -16,16 +16,22 @@ function filterTasks() {
 }
 
 function handleMouseEnter() {
-    isMouseOverSearchBar = true;
     const searchIcon = document.querySelector('.fas.fa-search');
     searchIcon.style.color = '#d077c5';
 }
 
 function handleMouseLeave() {
-    isMouseOverSearchBar = false;
     const searchIcon = document.querySelector('.fas.fa-search');
     if (!searchBar.matches(':focus')) {
         searchIcon.style.color = '#51c366';
+    }
+    checkSearchIcon();
+}
+
+function checkSearchIcon() {
+    const searchIcon = document.querySelector('.fas.fa-search');
+    if(searchIcon.matches(':hover')) {
+        searchIcon.style.color = '#d077c5';
     }
 }
 
